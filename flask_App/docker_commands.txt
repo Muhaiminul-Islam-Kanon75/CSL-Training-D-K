@@ -1,0 +1,9 @@
+docker build -t csl_flaskapp .
+docker images
+docker run -it csl_flaskapp:latest bash
+docker ps
+docker ps -a
+docker run -d -it -p 9090:5000 --name=CSL_FlaskApp csl_flaskapp:latest
+
+CONTAINER     ID                   IMAGE    COMMAND  CREATED  STATUS  PORTS   NAMES                                                
+7587e18291c2  csl_flaskapp:latest  python app.py  About    a       minute  ago    Up  About  a  minute  0.0.0.0:9090->5000/tcp,  [::]:9090->5000/tcp  CSL_FlaskApp
